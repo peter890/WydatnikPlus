@@ -52,6 +52,8 @@ public class DBConnection {
 	/** 
 	 * @uml.property name="connection"
 	 */
-	protected Connection connection;
+	protected static Connection connection;
+	
+	
 
 }

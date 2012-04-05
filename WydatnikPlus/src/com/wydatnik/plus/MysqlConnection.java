@@ -1,5 +1,7 @@
 package com.wydatnik.plus;
 
+
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -14,17 +16,20 @@ public final class MysqlConnection extends DBConnection {
 
 		return ourInstance;
 	}
+	
 
 	private MysqlConnection() {
+		System.out.println("Konstruktor MysqlConnection");
 		driverName = "com.mysql.jdbc.Driver";
-		setUserName("root");
-		setPassword("");
-		setDBURL("jdbc:mysql://localhost/test?user=" + userName + "&password="
-				+ password);
+		setUserName("wydatnikpro");
+		setPassword("wydatnik1235");
+		setDBURL("jdbc:mysql://db4free.net/wydatnikpro");
+		
 		try {
 			Class.forName(driverName);
-			connection = DriverManager.getConnection(dburl);
+			connection = DriverManager.getConnection(dburl,userName, password);
 			statement = connection.createStatement();
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -83,5 +88,10 @@ public final class MysqlConnection extends DBConnection {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public static Connection getConnection(){
+		return connection;
+		
+	}
 
+	 
 }
