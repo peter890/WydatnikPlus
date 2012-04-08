@@ -3,6 +3,21 @@ package com.wydatnik.plus;
 
 public class Product {
 
+	public Product(String nazwa, double cena, int jednostka) {
+		super();
+		this.nazwa = nazwa;
+		this.cena = cena;
+		this.jednostka = jednostka;
+	}
+
+	public Product(int id, String nazwa, double cena, int jednostka) {
+		super();
+		this.id = id;
+		this.nazwa = nazwa;
+		this.cena = cena;
+		this.jednostka = jednostka;
+	}
+
 	/**
 	 * nazwa produktu, pobrana z bazy danych
 	 * @uml.property  name="nazwa"
