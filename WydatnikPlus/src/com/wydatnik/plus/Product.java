@@ -1,7 +1,7 @@
 package com.wydatnik.plus;
 
 
-public class Produkt {
+public class Product {
 
 	/**
 	 * nazwa produktu, pobrana z bazy danych

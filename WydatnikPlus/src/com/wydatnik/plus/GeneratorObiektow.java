@@ -7,7 +7,7 @@ public interface GeneratorObiektow {
 		
 		/**
 		 */
-		public abstract Produkt generujObiekt();
+		public abstract Product generujObiekt();
 		
 
 }
