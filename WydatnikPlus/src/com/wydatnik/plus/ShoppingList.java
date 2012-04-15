@@ -34,5 +34,6 @@ public  class ShoppingList {
 public static void main(String[] arg){
 	ShoppingList sl = new ShoppingList();
 	System.out.println("fgfh");
+	System.out.println("test");
 }
 }
