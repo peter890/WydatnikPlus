@@ -3,6 +3,14 @@ package com.wydatnik.plus;
 
 public class Product {
 
+	private String nazwa;
+	private int id;
+	private int jednostka;
+	private double cena;
+	private long kod;
+	private String opis;
+	
+
 	public Product(String nazwa, double cena, int jednostka) {
 		super();
 		this.nazwa = nazwa;
@@ -10,19 +18,21 @@ public class Product {
 		this.jednostka = jednostka;
 	}
 
-	public Product(int id, String nazwa, double cena, int jednostka) {
+	public Product(int id, String nazwa, double cena, int jednostka, long kod, String opis) {
 		super();
 		this.id = id;
 		this.nazwa = nazwa;
 		this.cena = cena;
 		this.jednostka = jednostka;
+		this.kod = kod;
+		this.opis = opis;
 	}
 
 	/**
 	 * nazwa produktu, pobrana z bazy danych
 	 * @uml.property  name="nazwa"
 	 */
-	private String nazwa;
+	
 
 	/**
 	 * Getter of the property <tt>nazwa</tt>
@@ -46,7 +56,7 @@ public class Product {
 	 * identyfikator produktu, pobrany z DB
 	 * @uml.property  name="id"
 	 */
-	private int id;
+	
 
 	/**
 	 * Getter of the property <tt>id</tt>
@@ -69,7 +79,7 @@ public class Product {
 	/**
 	 * @uml.property  name="cena"
 	 */
-	private double cena;
+	
 
 	/**
 	 * Getter of the property <tt>cena</tt>
@@ -93,8 +103,7 @@ public class Product {
 	 * jednostka w jakich podawana jest ilosc produktu. "jednostka" zbudowana w oparciu o enumerator 
 	 * @uml.property  name="jednostka"
 	 */
-	private int jednostka;
-
+	
 	/**
 	 * Getter of the property <tt>jednostka</tt>
 	 * @return  Returns the jednostka.
@@ -111,6 +120,22 @@ public class Product {
 	 */
 	public void setJednostka(int jednostka) {
 		this.jednostka = jednostka;
+	}
+	
+	public double getKod() {
+		return kod;
+	}
+
+	public void setKod(long kod) {
+		this.kod = kod;
+	}
+
+	public String getOpis() {
+		return opis;
+	}
+
+	public void setOpis(String opis) {
+		this.opis = opis;
 	}
 
 }
