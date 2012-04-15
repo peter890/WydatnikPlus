@@ -12,7 +12,7 @@ public  class ShoppingList {
 	 */
 	public void addProduct(Product produkt) throws SQLException {
 	StringBuffer sqlQuery = new StringBuffer();
-	sqlQuery.append("INSERT INTO \"main\".\"pio_tran\" (\"title\",\"amount\",\"type\",\"data\") \"VALUES \"("+produkt.getNazwa()+","+produkt.getCena()+","+produkt.getTyp()+","+produkt.getData()+")");
+	//sqlQuery.append("INSERT INTO \"main\".\"pio_tran\" (\"title\",\"amount\",\"type\",\"data\") \"VALUES \"("+produkt.getNazwa()+","+produkt.getCena()+","+produkt.getTyp()+","+produkt.getData()+")");
 	Connection cn = MysqlConnection.getConnection();
 	ResultSet rs = cn.createStatement().executeQuery(sqlQuery.toString());
 	} 
@@ -33,5 +33,6 @@ public  class ShoppingList {
 		
 public static void main(String[] arg){
 	ShoppingList sl = new ShoppingList();
+	System.out.println("fgfh");
 }
 }
