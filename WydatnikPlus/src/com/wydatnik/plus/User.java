@@ -2,7 +2,7 @@ package com.wydatnik.plus;
 
 public final class User {
 
-	private double id;
+	private int id;
 	private String login;
 	private String password;
 	private String imie;
@@ -12,7 +12,7 @@ public final class User {
 	
 	
 	
-	public User(double id, String login, String password, String imie, String nazwisko, String email, String lastLogin)
+	public User(int id, String login, String password, String imie, String nazwisko, String email, String lastLogin)
 	{
 		this.id = id;
 		this.login = login;
@@ -22,10 +22,20 @@ public final class User {
 		this.email = email;
 		this.lastLogin = lastLogin;
 	}
+	public User(){
+		this.id = 0;
+		this.login = "";
+		this.password = "";
+		this.imie = "";
+		this.nazwisko = "";
+		this.email = "";
+		this.lastLogin = "";
+		
+	}
 
 
 
-	public double getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -63,6 +73,12 @@ public final class User {
 
 	public String getLastLogin() {
 		return lastLogin;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", login=" + login + ", password=" + password
+				+ ", imie=" + imie + ", nazwisko=" + nazwisko + ", email="
+				+ email + ", lastLogin=" + lastLogin + "]";
 	}
 	
 	

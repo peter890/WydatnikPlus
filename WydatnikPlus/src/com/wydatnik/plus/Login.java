@@ -77,9 +77,9 @@ public final class Login {
 		user = null;
 		return true;
 	}
-	
-	public static boolean isLogged(){
-			return isLogged;
+
+	public static boolean isLogged() {
+		return isLogged;
 	}
 
 }
